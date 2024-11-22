@@ -19,7 +19,8 @@ export function Homepage () {
           duration: .3,
           ease: "easeInOut", 
           repeatType: "reverse",
-        }}
+          }}
+          onClick={ () => alert('Faça seu login para conferir nossos produtos!') }
         >
            Explore agora
            <motion.svg

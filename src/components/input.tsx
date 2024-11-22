@@ -11,8 +11,7 @@ export function Input({ type, icon: Icon, placeholder, ...rest }: InputProps) {
   return (
     <div className="flex bg-whites-white_200 items-center border rounded-lg w-full p-4 gap-2">
       <Icon
-        className="text-blacks-black_500"
-        size={30}
+        className="text-blacks-black_500 h-7 w-7"
         weight='bold'
       />
       <input

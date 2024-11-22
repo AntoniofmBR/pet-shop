@@ -50,7 +50,7 @@ export function Header () {
   }
 
   return (
-    <header className='flex justify-between items-center h-32 w-full px-7 absolute lg:gap-0 md:gap-0 sm:gap-4' >
+    <header className='flex lg:flex-row md:flex-row sm:flex-col justify-between items-center h-32 w-full px-7 absolute lg:gap-0 md:gap-0 sm:gap-4' >
       <motion.img
         src={logo}
         alt="logo"
@@ -58,7 +58,7 @@ export function Header () {
         whileHover={{ scale: 1.1 }}
       />
 
-      <div className='flex gap-7 lg:text-2xl md:text-2xl sm:text-base font-bold' >
+      <div className='flex gap-7 lg:text-2xl md:text-2xl sm:text-sm font-bold' >
         <Link
           to='homePage'
           smooth={ true }
@@ -109,7 +109,7 @@ export function Header () {
       </div>
 
       <motion.button
-       className='lg:p-5 md:p-4 sm:p-3 bg-blues-blue_500 font-bold text-whites-white_200 rounded-md w-28 lg:text-xl md:text-xl sm:text-base'
+       className='lg:p-5 md:p-4 sm:p-3 bg-blues-blue_500 font-bold text-whites-white_200 rounded-md w-28 lg:text-xl md:text-xl sm:text-base lg:mb-0 md:mb-0 sm:mb-0'
        whileHover={{ scale: 1.1, backgroundColor: '#0B0B68' }}
        transition={{
         duration: .3,
@@ -126,29 +126,8 @@ export function Header () {
         shouldCloseOnEsc={ true }
         shouldCloseOnOverlayClick={ true }
         onRequestClose={ handleCloseLoginModal }
-        style={{
-          content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: '#D9D9D9',
-            padding: '50px 20px',
-            borderRadius: '20px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            height: '65%',
-            width: '50%',
-          },
-          overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-          },
-        }}
+        overlayClassName="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+        className='relative bg-gray-300 px-6 py-12 rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3 h-auto flex flex-col items-center justify-between'
       >
         <div className='flex justify-between w-full' >
           <div />
@@ -158,15 +137,14 @@ export function Header () {
           </h1>
 
           <X
-            size={25}
+            className='-translate-y-7 lg:h-7 lg:w-7 md:h-6 md:w-6 sm:h-5 sm:w-5 hover:scale-110'
             color='#000'
             weight='bold'
             onClick={ handleCloseLoginModal }
-            className='-translate-y-7 hover:scale-110'
           />
         </div>
 
-        <div className='flex flex-col items-center justify-center gap-2 mt-7 mb-7 w-1/2' >
+        <div className='flex flex-col items-center justify-center gap-2 mt-7 mb-7 lg:w-1/2 md:w-1/2 sm:w-full' >
           <Input
             type='email'
             placeholder='E-mail'
@@ -214,29 +192,8 @@ export function Header () {
         shouldCloseOnEsc={ true }
         shouldCloseOnOverlayClick={ true }
         onRequestClose={ handleCloseRegisterModal }
-        style={{
-          content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: '#D9D9D9',
-            padding: '50px 20px',
-            borderRadius: '20px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            height: '75%',
-            width: '50%',
-          },
-          overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-          },
-        }}
+        overlayClassName="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+        className='relative bg-gray-300 px-6 py-12 rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3 h-auto flex flex-col items-center justify-between'
       >
         <div className='flex justify-between w-full' >
           <div />
@@ -250,11 +207,11 @@ export function Header () {
             color='#000'
             weight='bold'
             onClick={ handleCloseRegisterModal }
-            className='-translate-y-7 hover:scale-110'
+            className='-translate-y-7 lg:h-7 lg:w-7 md:h-6 md:w-6 sm:h-5 sm:w-5 hover:scale-110'
           />
         </div>
 
-        <div className='flex flex-col items-center justify-center gap-2 mt-7 mb-7 w-1/2' >
+        <div className='flex flex-col items-center justify-center gap-2 mt-7 mb-7 lg:w-1/2 md:w-1/2 sm:w-full' >
           <Input
             type='text'
             placeholder='Nome'

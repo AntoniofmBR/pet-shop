@@ -15,7 +15,7 @@ export function Footer () {
           whileHover={{ scale: 1.1 }}
         />
 
-        <div className='flex gap-7 lg:text-2xl md:text-2xl sm:text-sm font-bold' >
+        <div className='flex lg:gap-7 md:gap-7 sm:gap-2 lg:text-2xl md:text-2xl sm:text-xs font-bold' >
           <Link
             to='homePage'
             smooth={ true }
@@ -65,7 +65,7 @@ export function Footer () {
           </Link>
         </div>
 
-        <div className='flex gap-4' >
+        <div className='flex lg:gap-4 md:gap-4 sm:gap-2' >
           <motion.div 
             className='lg:h-12 lg:w-12 md:h-10 md:w-10 sm:h-6 sm:w-6 flex items-center justify-center rounded-full bg-gradient-to-r from-yellows-yellow_100 via-pinks-pink_100 to-purples-purple_200'
             whileHover={{ scale: 1.07 }}
